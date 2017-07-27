@@ -167,7 +167,7 @@ function randomWord(){
 function getBigWordList(){
     let lotsOfWords = [];
     // Answer goes here:
-    for(i=0; i<100; i++){
+    for(let i=0; i<100; i++){
     lotsOfWords[i] = randomWord();
     }
 return lotsOfWords;
@@ -186,5 +186,16 @@ let option2 = [ 76, 364, 4, 934, 6, 345, 6789, 123, 675, 12 ];
 
 function getFinalChoice(){
     // Answer goes here:
+   let finalChoice = [];
 
+   for(let i=0; i<option2.length; i++){
+    if(option1[i] > option2[i]){
+      finalChoice[i] = option1[i];
+    }
+    else{
+      finalChoice[i] = option2[i];
+    }
+   }
+
+   return  finalChoice;
 }
